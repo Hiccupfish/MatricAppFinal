@@ -1,5 +1,3 @@
-// main file electron
-
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
@@ -8,21 +6,30 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
-      nodeIntegration: true,
-      contextIsolation: false,
+      // Remove the preload option since we don't have a preload.js file
+      nodeIntegration: false, // Keep this for security
+      contextIsolation: true, // Keep this for security
     },
   });
 
   mainWindow.loadFile('index.html');
+
+  // Open the DevTools automatically if not in production
+  if (!app.isPackaged) {
+    mainWindow.webContents.openDevTools();
+  }
 }
 
-app.on('ready', createWindow);
+
+
+app.whenReady().then(createWindow); // Ensure app is ready before creating the window
+
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
 });
+
 app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
