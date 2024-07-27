@@ -12,5 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^31.3.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1"
   }
 }

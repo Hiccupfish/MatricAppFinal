@@ -1,7 +1,3 @@
-// This script creates a SQLite database named matric_prep.db
-
-
-
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
