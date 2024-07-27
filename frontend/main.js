@@ -10,7 +10,7 @@ function createWindow () {
     }
   });
 
-  mainWindow.loadFile('index.html');
+  mainWindow.loadFile('frontend/index.html');
 }
 
 app.on('ready', createWindow);

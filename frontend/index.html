@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MatricPrepApp - Home</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+  <header>
+    <div id="navigation">
+      <!-- Navigation content -->
+      <header>
+        <div id="navigation">
+          <div>
+            <button onclick="loadHome()">Home</button>
+            <button onclick="toggleDropdown('lessons')">Lessons</button>
+            <button onclick="toggleDropdown('practice')">Practice</button>
+            <button onclick="loadProgress()">Progress</button>
+            <button onclick="loadSettings()">Settings</button>
+          </div>
+          <input type="text" id="search-bar" placeholder="Search...">
+        </div>
+      </header>
+    </div>
+  </header>
+  <div id="content">
+    <h1>Welcome to MatricPrepApp!</h1>
+    <p>Your go-to app for mastering mathematics. Explore various features designed to help you succeed in math.</p>
+    
+  
+    </section>
+
+
+
+  <section id="features">
+    <h2>Features</h2>
+    <div class="feature">
+      <img src="path/to/lessons-image.jpg" alt="Interactive Lessons">
+      <div class="feature-content">
+        <h3>Interactive Lessons</h3>
+        <p>Engage with lessons on Algebra, Geometry, and Calculus. Each lesson includes interactive examples to help you understand complex concepts.</p>
+        <button onclick="loadLessons()">Explore Lessons</button>
+      </div>
+    </div>
+
+    <div class="feature">
+      <img src="path/to/practice-image.jpg" alt="Practice Exercises">
+      <div class="feature-content">
+        <h3>Practice Exercises</h3>
+        <p>Enhance your skills with practice tests, flashcards, and quizzes. Our exercises are designed to help you master math concepts effectively.</p>
+        <button onclick="loadPractice()">Explore Practice</button>
+      </div>
+    </div>
+
+    <div class="feature">
+      <img src="path/to/progress-image.jpg" alt="Progress Tracking">
+      <div class="feature-content">
+        <h3>Track Your Progress</h3>
+        <p>Monitor your achievements and stay motivated with detailed progress tracking. See your progress in each math section and set goals for improvement.</p>
+        <button onclick="loadProgress()">Explore Progress</button>
+      </div>
+    </div>
+  </section>
+  <script>
+    function loadLessons() {
+      document.getElementById('content').innerHTML = `
+        <h2>Lessons</h2>
+        <p>Explore our interactive lessons on Algebra, Geometry, and Calculus.</p>
+      `;
+    }
+
+    function loadPractice() {
+      document.getElementById('content').innerHTML = `
+        <h2>Practice</h2>
+        <p>Access practice tests, flashcards, and quizzes to hone your skills.</p>
+      `;
+    }
+
+    function loadProgress() {
+      document.getElementById('content').innerHTML = `
+        <h2>Progress</h2>
+        <p>View your progress with detailed charts and progress bars.</p>
+      `;
+    }
+  </script>
+  <section id="testimonials">
+    <h2>What Our Users Say</h2>
+    <blockquote>
+      <p>"MatricPrepApp has transformed the way I study math. The interactive lessons are engaging, and the practice exercises are incredibly helpful!"</p>
+      <footer>- Student A</footer>
+    </blockquote>
+    <blockquote>
+      <p>"As a teacher, I find MatricPrepApp to be an invaluable resource for my students. It makes learning math fun and effective."</p>
+      <footer>- Teacher B</footer>
+    </blockquote>
+  </section>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <p>MatricPrepApp is dedicated to helping learners master mathematics. Our interactive lessons, practice exercises, and progress tracking are designed to make math engaging and effective.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#" onclick="loadHome()">Home</a></li>
+          <li><a href="#" onclick="loadLessons()">Lessons</a></li>
+          <li><a href="#" onclick="loadPractice()">Practice</a></li>
+          <li><a href="#" onclick="loadProgress()">Progress</a></li>
+          <li><a href="#" onclick="loadSettings()">Settings</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Email: support@matricprepapp.com</p>
+        <p>Follow us on:</p>
+        <a href="https://facebook.com/matricprepapp" target="_blank">Facebook</a> |
+        <a href="https://twitter.com/matricprepapp" target="_blank">Twitter</a> |
+        <a href="https://instagram.com/matricprepapp" target="_blank">Instagram</a>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 MatricPrepApp. All rights reserved.</p>
+    </div>
+  </footer>
+  
+</body>
+</html>
