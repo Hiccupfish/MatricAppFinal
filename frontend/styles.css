@@ -202,3 +202,73 @@ footer {
     font-size: 0.9em;
   }
   
+
+  /* lessons css */
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background: #004d99;
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    background: #003366;
+    padding: 1em;
+  }
+  
+  nav button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 1em;
+    cursor: pointer;
+  }
+  
+  nav button:hover {
+    background: #002244;
+  }
+  
+  main {
+    padding: 2em;
+  }
+  
+  .feature-section {
+    display: flex;
+    align-items: center;
+    padding: 1em 0;
+  }
+  
+  .feature-section img {
+    max-width: 200px;
+    margin-right: 2em;
+  }
+  
+  .feature-section div {
+    max-width: 600px;
+  }
+  
+  .feature-section h3 {
+    margin-top: 0;
+  }
+  
+  .feature-section button {
+    background: #004d99;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    margin-top: 1em;
+  }
+  
+  .feature-section button:hover {
+    background: #003366;
+  }
+  
+
