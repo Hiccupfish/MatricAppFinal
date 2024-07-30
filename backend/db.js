@@ -19,7 +19,9 @@ db.serialize(() => {
   db.run(`CREATE TABLE IF NOT EXISTS Lessons (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT NOT NULL,
-    content TEXT NOT NULL
+    content TEXT NOT NULL,
+    subject_id INTEGER,
+    FOREIGN KEY (subject_id) REFERENCES Subjects(id)
   )`);
 
   db.run(`CREATE TABLE IF NOT EXISTS Questions (
@@ -58,6 +60,11 @@ db.serialize(() => {
     status TEXT,
     FOREIGN KEY (user_id) REFERENCES Users(id),
     FOREIGN KEY (friend_id) REFERENCES Users(id)
+  )`);
+
+  db.run(`CREATE TABLE IF NOT EXISTS Subjects (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL
   )`);
 });
 

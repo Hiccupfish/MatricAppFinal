@@ -25,14 +25,17 @@ db.serialize(() => {
     title TEXT NOT NULL,
     content TEXT NOT NULL
   )`);
-
+  
   db.run(`CREATE TABLE IF NOT EXISTS Questions (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     lesson_id INTEGER,
+    chapter_id INTEGER,
     question_text TEXT NOT NULL,
     options TEXT NOT NULL,
     correct_answer TEXT NOT NULL,
-    FOREIGN KEY (lesson_id) REFERENCES Lessons(id)
+    difficulty TEXT NOT NULL,
+    FOREIGN KEY (lesson_id) REFERENCES Lessons(id),
+    FOREIGN KEY (chapter_id) REFERENCES Chapters(id)
   )`);
 
   db.run(`CREATE TABLE IF NOT EXISTS Answers (
