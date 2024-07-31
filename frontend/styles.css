@@ -1,19 +1,22 @@
 /* styles.css */
 
+/* Global styles */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
 }
 
 header {
   width: 100%;
-  background-color: #f4f4f4;
-  padding: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #333;
+  color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 0;
@@ -31,7 +34,7 @@ header {
 #content {
   width: 100%;
   max-width: 1200px;
-  margin-top: 60px; /* Adjusted for fixed header */
+  margin-top: 80px; /* Adjusted for fixed header */
   padding: 20px;
   text-align: center;
   flex: 1;
@@ -47,18 +50,18 @@ header {
   align-items: center;
   justify-content: center;
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
   padding: 20px;
   max-width: 900px;
 }
 
 .feature img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
   margin-right: 20px;
 }
 
@@ -68,26 +71,29 @@ header {
 
 .feature-content h3 {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.6em;
+  color: #333;
 }
 
 .feature-content p {
   font-size: 1em;
   margin: 10px 0;
+  color: #666;
 }
 
 .feature-content button {
-  background-color: #007BFF;
+  background-color: #0056b3;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 5px;
   font-size: 1em;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .feature-content button:hover {
-  background-color: #0056b3;
+  background-color: #003d80;
 }
 
 .card-container {
@@ -99,17 +105,18 @@ header {
 
 .card {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 280px;
   padding: 20px;
   text-align: left;
   overflow: hidden;
-  transition: transform 0.2s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
@@ -120,35 +127,38 @@ header {
 
 .card h3 {
   margin: 10px 0;
+  color: #333;
 }
 
 .card p {
-  color: #555;
+  color: #777;
 }
 
 .card button {
-  background-color: #007BFF;
+  background-color: #0056b3;
   color: white;
   border: none;
-  padding: 10px;
+  padding: 12px;
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
   display: block;
   width: 100%;
   margin-top: 10px;
+  transition: background-color 0.3s;
 }
 
 .card button:hover {
-  background-color: #0056b3;
+  background-color: #003d80;
 }
 
 /* Footer styles */
 footer {
-  background-color: #f4f4f4;
+  background-color: #333;
+  color: white;
   padding: 20px;
   text-align: center;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #444;
   width: 100%;
 }
 
@@ -169,10 +179,12 @@ footer {
 .footer-section h4 {
   margin-bottom: 10px;
   font-size: 1.2em;
+  color: #fff;
 }
 
 .footer-section p {
   font-size: 0.9em;
+  color: #ddd;
 }
 
 .footer-section ul {
@@ -186,7 +198,7 @@ footer {
 
 .footer-section ul li a {
   text-decoration: none;
-  color: #007BFF;
+  color: #5c9ddd;
 }
 
 .footer-section ul li a:hover {
@@ -194,7 +206,7 @@ footer {
 }
 
 .footer-bottom {
-  background-color: #e9ecef;
+  background-color: #222;
   padding: 10px;
   margin-top: 10px;
 }
@@ -202,16 +214,17 @@ footer {
 .footer-bottom p {
   margin: 0;
   font-size: 0.9em;
+  color: #ccc;
 }
 
 /* lessons css */
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
-  background: #004d99;
+  background: #0056b3;
   color: white;
   padding: 1em;
   text-align: center;
@@ -220,7 +233,7 @@ header {
 nav {
   display: flex;
   justify-content: center;
-  background: #003366;
+  background: #003d80;
   padding: 1em;
 }
 
@@ -233,7 +246,7 @@ nav button {
 }
 
 nav button:hover {
-  background: #002244;
+  background: #002d60;
 }
 
 main {
@@ -257,58 +270,61 @@ main {
 
 .feature-section h3 {
   margin-top: 0;
+  color: #333;
 }
 
 .feature-section button {
-  background: #004d99;
+  background: #0056b3;
   color: white;
   border: none;
   padding: 0.5em 1em;
   cursor: pointer;
   margin-top: 1em;
+  transition: background-color 0.3s;
 }
 
 .feature-section button:hover {
-  background: #003366;
+  background: #003d80;
 }
 
 /* lessonshome */
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: #f1f1f1;
 }
 
 header {
-  background-color: #4CAF50;
+  background-color: #0056b3;
   color: white;
-  padding: 10px 0;
+  padding: 15px 0;
   text-align: center;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2em;
+  font-size: 2.2em;
 }
 
 nav {
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 nav button {
-  background-color: #4CAF50;
+  background-color: #0056b3;
   border: none;
   color: white;
   padding: 10px 20px;
   margin: 5px;
   cursor: pointer;
   font-size: 1em;
+  transition: background-color 0.3s;
 }
 
 nav button:hover {
-  background-color: #45a049;
+  background-color: #003d80;
 }
 
 main {
@@ -316,39 +332,42 @@ main {
 }
 
 section {
-  background-color: white;
+  background-color: #fff;
   margin: 20px 0;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
   margin-top: 0;
+  color: #333;
 }
 
 section p {
   font-size: 1.1em;
   line-height: 1.6;
+  color: #666;
 }
 
 section button {
-  background-color: #4CAF50;
+  background-color: #0056b3;
   border: none;
   color: white;
   padding: 10px 20px;
   cursor: pointer;
   font-size: 1em;
+  transition: background-color 0.3s;
 }
 
 section button:hover {
-  background-color: #45a049;
+  background-color: #003d80;
 }
 
 footer {
-  background-color: #4CAF50;
+  background-color: #0056b3;
   color: white;
   text-align: center;
-  padding: 10px 0;
+  padding: 15px 0;
   width: 100%;
 }

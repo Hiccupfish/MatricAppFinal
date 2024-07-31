@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MatricPrepApp - Chapter Description</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+  <script>
+    function loadChapterContent() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const chapter = urlParams.get('chapter');
+      
+      let title = '';
+      let description = '';
+
+      switch (chapter) {
+        case 'algebra':
+          title = 'Algebra';
+          description = 'Detailed description about Algebra, including linear equations, quadratic equations, and polynomials.';
+          break;
+        case 'geometry':
+          title = 'Geometry';
+          description = 'Detailed description about Geometry, including shapes, angles, and theorems.';
+          break;
+        case 'calculus':
+          title = 'Calculus';
+          description = 'Detailed description about Calculus, including derivatives, integrals, and limits.';
+          break;
+        default:
+          title = 'Unknown Chapter';
+          description = 'The chapter you selected does not exist.';
+      }
+
+      document.getElementById('chapter-title').innerText = title;
+      document.getElementById('chapter-description').innerText = description;
+    }
+  </script>
+</head>
+<body onload="loadChapterContent()">
+  <header>
+    <h1 id="chapter-title">Chapter Title</h1>
+  </header>
+  <main>
+    <section>
+      <p id="chapter-description">Chapter Description</p>
+      <button onclick="window.location.href='questions-list.html?chapter=' + new URLSearchParams(window.location.search).get('chapter')">Explore Questions</button>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <!-- Footer content as provided in your initial HTML -->
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 MatricPrepApp. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

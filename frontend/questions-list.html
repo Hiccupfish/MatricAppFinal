@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MatricPrepApp - Questions List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Questions List</h1>
+  </header>
+  <main>
+    <div id="questions-container">
+      <!-- Questions will be loaded here -->
+    </div>
+  </main>
+  <script>
+    // Function to fetch questions from the backend
+    async function fetchQuestions() {
+      try {
+        const response = await fetch('http://localhost:3000/questions'); // URL for backend
+        const data = await response.json();
+        displayQuestions(data); // Call to function that updates the HTML
+      } catch (error) {
+        console.error('Error fetching questions:', error);
+      }
+    }
+
+    // Function to display questions in HTML
+    function displayQuestions(questions) {
+      const container = document.getElementById('questions-container');
+      container.innerHTML = questions.map(question => `
+        <div class="question">
+          <h3>${question.question}</h3>
+          <p>${question.answer}</p>
+          <p>Difficulty: ${question.difficulty}</p>
+        </div>
+      `).join('');
+    }
+
+    // Fetch and display questions when the page loads
+    window.onload = fetchQuestions;
+  </script>
+</body>
+</html>
