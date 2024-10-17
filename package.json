@@ -11,12 +11,13 @@
   "author": "Tshidiso Mahlo",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^31.3.0"
+    "electron": "^31.7.1"
   },
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
     "express": "^4.21.1",
     "path": "^0.12.7",
+    "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
   }
 }

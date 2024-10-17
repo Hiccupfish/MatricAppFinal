@@ -37,6 +37,26 @@ app.get('/api/questions', function(req, res){
     res.json(rows);
   });
 });
+/**
+ * Retrieves all chapters from the database and sends them as a response.
+ *
+ * @param {express.Request} req - The request object containing query parameters, body, etc.
+ * @param {express.Response} res - The response object to send back to the client.
+ *
+ * @returns {void}
+ */
+
+app.get('/api/chapters', function(req, res){
+  console.log('Received request for /api/chapters'); // received chapters request
+  db.all('SELECT * FROM Chapters', (err, rows) => {
+    if (err) {
+      console.error('Error fetching chapters:', err.message);
+      return res.status(500).json({ error: 'Failed to fetch chapters' });
+    }
+    console.log('Fetched chapters:', rows); // Debug line
+    res.json(rows);
+  });
+});
 
 
 //start the server
